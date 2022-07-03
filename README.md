@@ -5,7 +5,7 @@
 
 ##### 📓 I’m currently learning about data analytics and data science
 ##### 📫 How to reach me: 
-- Email    : ummukalsum1297@gmail.com
-- LinkedIn : www.linkedin.com/in/ummukalsumfn
+##### - Email    : ummukalsum1297@gmail.com
+##### - LinkedIn : www.linkedin.com/in/ummukalsumfn
 
 

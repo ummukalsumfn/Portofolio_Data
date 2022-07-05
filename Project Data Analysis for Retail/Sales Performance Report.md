@@ -17,6 +17,12 @@ Adapun dataset yang sudah diberikan dan akan digunakan pada project ini berisi d
 - Product Category
 - Product Sub-Category
 
+Questions
+1. Overall perofrmance DQLab Store dari tahun 2009 - 2012 untuk jumlah order dan total sales order finished
+2. Overall performance DQLab by subcategory product yang akan dibandingkan antara tahun 2011 dan tahun 2012
+3. Efektifitas dan efisiensi promosi yang dilakukan selama ini, dengan menghitung burn rate dari promosi yang dilakukan overall berdasarkan tahun
+4. Efektifitas dan efisiensi promosi yang dilakukan selama ini, dengan menghitung burn rate dari promosi yang dilakukan overall berdasarkan sub-category
+5. Analisa terhadap customer setiap tahunnya
 
 ## 2. DQLab Store Overall Performance
 Pekerjaan pertama yang harus kita lakukan adalah melakukan analisis terhadap overall performance dari DQLab Store berdasarkan tahun dan product sub category.
@@ -42,6 +48,7 @@ GROUP BY YEAR(order_date);
 |  2012 | 4482983158 |            1254 |
 +-------+------------+-----------------+
 ```
+Overall perofrmance DQLab Store dari tahun 2009 - 2012 untuk jumlah order dan total sales order finished
 
 **- Overall Performance by Product Sub Category**
 
@@ -96,9 +103,45 @@ Output
 |  2012 | Rubber Bands                   |   3837880 |
 +-------+--------------------------------+-----------+ 
 ```
+Overall performance DQLab by subcategory product yang akan dibandingkan antara tahun 2011 dan tahun 2012
+
 ## 3. DQLab Store Promotion Effectiveness and Efficiency
 Setelah melihat overall performance dari DQLab Store, sebagai seorang data analyst, pekerjaan selanjutnya yang harus kita lakukan adalah melakukan analisis keterkaitan antara sales dengan promosi yang sudah dilakukan oleh DQLab Store sebelumnya.
-- Promotion Effectiveness and Efficiency by Product Sub Category
+
+**- Promotion Effectiveness and Efficiency by Years**
+
+Pada bagian ini kita akan melakukan analisa terhadap efektifitas dan efisiensi dari promosi yang sudah dilakukan selama ini. Efektifitas dan efisiensi dari promosi yang dilakukan akan dianalisa berdasarkan Burn Rate yaitu dengan membandigkan total value promosi yang dikeluarkan terhadap total sales yang diperoleh. **DQLab berharap bahwa burn rate tetap berada diangka maskimum 4.5%**
+
+```Formula untuk burn rate : (total discount / total sales) * 100```
+
+```sql
+select
+year(order_date) as years,
+sum(sales) as sales,
+sum(discount_value) as promotion_value,
+round ((sum(discount_value)/sum(sales))*100,2) as burn_rate_percentage
+from dqlab_sales_store
+where order_status='Order Finished'
+group by years;
+```
+Output
+```
++-------+------------+-----------------+----------------------+
+| years | sales      | promotion_value | burn_rate_percentage |
++-------+------------+-----------------+----------------------+
+|  2009 | 4613872681 |       214330327 |                 4.65 |
+|  2010 | 4059100607 |       197506939 |                 4.87 |
+|  2011 | 4112036186 |       214611556 |                 5.22 |
+|  2012 | 4482983158 |       225867642 |                 5.04 |
++-------+------------+-----------------+----------------------+
+```
+Efektifitas dan efisiensi promosi yang dilakukan selama ini, dengan menghitung burn rate dari promosi yang dilakukan overall berdasarkan tahun 2009-2012
+
+**- Promotion Effectiveness and Efficiency by Product Sub Category**
+
+Pada bagian ini kita akan melakukan analisa terhadap efektifitas dan efisiensi dari promosi yang sudah dilakukan selama ini seperti pada bagian sebelumnya. 
+Akan tetapi, ada kolom yang harus ditambahkan, yaitu : product_sub_category dan product_category
+
 ```sql
 select 
 year(order_date) as years,
@@ -137,6 +180,8 @@ Output
 |  2012 | Rubber Bands                   | Office Supplies  |   3837880 |          117324 |                 3.06 |
 +-------+--------------------------------+------------------+-----------+-----------------+----------------------+
 ```
+Efektifitas dan efisiensi promosi yang dilakukan selama ini, dengan menghitung burn rate dari promosi yang dilakukan overall berdasarkan sub-category
+
 ## 4. Customer Analytics
 Setelah melihat overall performance yang tidak mengalami pertumbuhan yang signifikan, manajemen ingin mengetahui pertumbuhan dari sisi customer
 - Customers Transactions per Year

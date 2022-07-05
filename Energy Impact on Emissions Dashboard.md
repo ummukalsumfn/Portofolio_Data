@@ -14,5 +14,5 @@ However, we will be working on a specific case study with the aim of creating a 
 2. Does energy usage go hand in hand with CO2 emissions?
 3. Which countries have the highest internet usage?
 
-## Link
-https://public.tableau.com/views/CaseStudyTableau_1/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link
+## Visualization with Tableau
+Link --> https://public.tableau.com/views/CaseStudyTableau_1/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link

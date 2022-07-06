@@ -1,15 +1,19 @@
 # Summary
 ## 1_Case Study_NYC AirBnB
-Using Python + Google Colab and Google Data Studio for data visualization
+Using Python + Google Colab (data cleaning and analysis) and Google Data Studio for data visualization
 
 ## 2_Case Study_NYC Yellow Taxi
 Using Public Dataset in BigQuery and Tableau for visualization
 
-## Energy Impact on Emissions Dashboard
+## 3_Energy Impact on Emissions Dashboard
 Using dataset sources from World Bank and Tableau for data visualization
 
-## Covid-19 Open Data
+## 4_Covid-19 Open Data
 Using Public Dataset in BigQuery anda Google Data Studio for visualization
+
+## 5_COVID-19 Dashboard in Indonesia
+Using dataset sources from Kaggle and Google Data Studio for data visualization
+
 
 
 

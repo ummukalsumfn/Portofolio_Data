@@ -5,9 +5,8 @@
 ## 2_Case Study_NYC Yellow Taxi
 
 
-## Dashboard
-
-
+## Dashboard 
+Using dataset sources from World Bank and Tableau for data visualization
 
 
 

@@ -22,16 +22,6 @@ Adapun hal yang akan direview adalah :
 4. Category produk apa saja yang paling banyak dibeli oleh customers?
 5. Seberapa banyak customers yang tetap aktif bertransaksi?
 
-**Langkah yang akan dilakukan :**
-
-- Menggunakan klausa “Select … From …” untuk mengambil data di database
-- Menggunakan klausa Where dan Operator untuk menfilter data
-- Menggunakan “group by”dan fungsi aggregat untuk aggregasi penjualan dan revenue
-- Menggunakan “order by” untuk mengurutkan data
-- Menggunakan “union” untuk menggabungkan tabel data penjualan
-- Menggunakan “date and time function” dan fungsi text untuk data manipulation
-- Menggunakan subquery untuk menyimpan hasil sementara untuk digunakan kembali dalam query.
-
 ## 2.Pengenalan Tabel
 Sebelum memulai menyusun query SQL dan membuat Analisa dari hasil query, hal pertama yang perlu dilakukan adalah menjadi familiar dengan tabel yang akan digunakan. 
 Hal ini akan sangat berguna dalam menentukan kolom mana sekiranya berkaitan dengan problem yang akan dianalisa, dan proses manipulasi data apa yang sekiranya perlu dilakukan untuk kolom – kolom tersebut, karena tidak semua kolom pada tabel perlu untuk digunakan.
@@ -72,7 +62,7 @@ Output
 
 ```
 ## 3.Bagaimana Pertumbuhan Penjualan Saat Ini
-**- Total Penjualan dan Revenue pada Quarter-1 (Jan, Feb, Mar) dan Quarter-2 (Apr,Mei,Jun)**
+- **Total Penjualan dan Revenue pada Quarter-1 (Jan, Feb, Mar) dan Quarter-2 (Apr,Mei,Jun)**
 ```sql
 select
 sum(quantity) as total_penjualan,
@@ -123,6 +113,7 @@ from orders_2
 where status='Shipped'
 group by 1;
 ```
+Output
 ```
 +---------+-----------------+-----------+
 | quarter | total_penjualan | revenue   |
@@ -132,10 +123,13 @@ group by 1;
 +---------+-----------------+-----------+
 ```
 
-**- Perhitungan Growth Penjualan dan Revenue**
-Untuk project ini, perhitungan pertumbuhan penjualan akan dilakukan secara manual menggunakan formula yang disediakan di bawah. 
-Adapun perhitungan pertumbuhan penjualan dengan SQL dapat dilakukan menggunakan “window function” yang akan dibahas di materi DQLab berikutnya.
-- %Growth Penjualan = (6717 – 8694)/8694 = -22%
-- %Growth Revenue = (607548320 – 799579310)/ 799579310 = -24% 
+- **Perhitungan Growth Penjualan dan Revenue**
 
+Untuk project ini, perhitungan pertumbuhan penjualan akan dilakukan secara manual menggunakan formula yang disediakan di bawah. 
+
+```%Growth Penjualan = (6717 – 8694)/8694 = -22%```
+
+```%Growth Revenue = (607548320 – 799579310)/ 799579310 = -24% ```
+
+ ## 4.Customer Analytics
  

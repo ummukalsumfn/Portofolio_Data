@@ -27,7 +27,7 @@ Questions
 ## 2. DQLab Store Overall Performance
 Pekerjaan pertama yang harus kita lakukan adalah melakukan analisis terhadap overall performance dari DQLab Store berdasarkan tahun dan product sub category.
 
-**- Overall Performance by Product Sub Category**
+**- Overall Performance by Year**
 ```sql
 SELECT 
 YEAR(order_date) AS years,
@@ -38,6 +38,7 @@ WHERE order_status='Order Finished'
 GROUP BY YEAR(order_date);
 ```
  Output
+##### **Tabel 1. Overall Performance by Year*
 ```
 +-------+------------+-----------------+
 | years | sales      | number_of_order |
@@ -48,7 +49,7 @@ GROUP BY YEAR(order_date);
 |  2012 | 4482983158 |            1254 |
 +-------+------------+-----------------+
 ```
-Overall perofrmance DQLab Store dari tahun 2009 - 2012 untuk jumlah order dan total sales order finished
+Pada Tabel 1.Overall perofrmance DQLab Store dari tahun 2009 - 2012 untuk jumlah order dan total sales order finished dapat dilihat cenderung meningkat. Namun, sempat terjadi penurunan pada tahun 2011 untuk jumlah pesanan yang diselesaikan(number_of_order) dari 1248 menjadi 1178 .Sedangkan untuk jumlah seles pada tahun 2010-2011 terjadi penurunan kemudian kembali terjadi kenaikan jumlah sales pada tahun 2012. 
 
 **- Overall Performance by Product Sub Category**
 
@@ -63,6 +64,7 @@ GROUP BY years,product_sub_category
 ORDER BY years,sales DESC;
 ```
 Output
+**Tabel 2.Overall Performance by Product Sub Category**
 ```
 +-------+--------------------------------+-----------+
 | years | product_sub_category           | sales     |

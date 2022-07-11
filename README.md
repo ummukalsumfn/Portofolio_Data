@@ -2,7 +2,7 @@
 ## 1_Case Study_NYC AirBnB
 Using Python + Google Colab (data cleaning and analysis) and Google Data Studio for data visualization
 
-## 2_Case Study_Iowa Liquor Sales
+## 2_Case Study Iowa Liquor Sales
 Using Public Dataset in BigQuery and Google Data Studio for visualization
 
 ## 3_Energy Impact on Emissions Dashboard

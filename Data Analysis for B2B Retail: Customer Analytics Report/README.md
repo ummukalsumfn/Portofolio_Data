@@ -1,4 +1,4 @@
-# Data Analysis for B2B Retail: Customer Analytics Report (**On Progress**)
+# Data Analysis for B2B Retail: Customer Analytics Report  
 
 ## 1.Intro
 xyz.com adalah perusahan rintisan B2B yang menjual berbagai produk tidak langsung kepada end user tetapi ke bisnis/perusahaan lainnya. Sebagai data-driven company, maka setiap pengambilan keputusan di xyz.com selalu berdasarkan data. Setiap quarter xyz.com akan mengadakan townhall dimana seluruh atau perwakilan divisi akan berkumpul untuk me-review performance perusahaan selama quarter terakhir.
@@ -132,4 +132,102 @@ Untuk project ini, perhitungan pertumbuhan penjualan akan dilakukan secara manua
 ```%Growth Revenue = (607548320 – 799579310)/ 799579310 = -24% ```
 
  ## 4.Customer Analytics
- 
+ - Apakah jumlah customers xyz.com semakin bertambah?
+ ```sql
+ select quarter,count(distinct customerID) as total_customers
+from
+(select
+customerID,
+createDate,
+quarter(createDate) as quarter
+from customer
+where createDate between '2004-01-01' and '2004-06-30') tabel_b
+group by quarter;
+ ```
+ Output
+ ```
+ +---------+-----------------+
+| quarter | total_customers |
++---------+-----------------+
+|       1 |              43 |
+|       2 |              35 |
++---------+-----------------+
+ ```
+- Seberapa banyak customers tersebut yang sudah melakukan transaksi?
+```sql
+select quarter,count(customerID) as total_customers
+from
+(select customerID,createDate,quarter(createDate) as quarter from customer
+    where createDate between '2004-01-01' and '2004-06-30')tabel_b
+    where customerID in (select distinct(customerID) as total_customers
+    from orders_1
+    union
+    select distinct (customerID) as total_customers from orders_2)
+group by quarter;
+```
+Output
+```
++---------+-----------------+
+| quarter | total_customers |
++---------+-----------------+
+|       1 |              25 |
+|       2 |              19 |
++---------+-----------------+
+```
+- Category produk apa saja yang paling banyak di-order oleh customers di Quarter-2?
+```sql
+select * from (select categoryID, count( distinct orderNumber) as total_order,sum(quantity) as total_penjualan 
+from
+	(select productCode,orderNumber,quantity,status,left(productCode,3) 	as categoryID
+	from orders_2
+	where status='Shipped')tabel_c
+group by categoryID)sub
+order by total_order desc;
+```
+Output
+```
++------------+-------------+-----------------+
+| categoryID | total_order | total_penjualan |
++------------+-------------+-----------------+
+| S18        |          25 |            2264 |
+| S24        |          21 |            1826 |
+| S32        |          11 |             616 |
+| S12        |          10 |             491 |
+| S50        |           8 |             292 |
+| S10        |           8 |             492 |
+| S70        |           7 |             675 |
+| S72        |           2 |              61 |
++------------+-------------+-----------------+
+```
+- Seberapa banyak customers yang tetap aktif bertransaksi setelah transaksi pertamanya?
+```sql
+#Menghitung total unik customers yang transaksi di quarter_1
+SELECT COUNT(DISTINCT customerID) as total_customers FROM orders_1;
+#output = 25
+select '1' as quarter,count(distinct customerID)/25*100 as q2
+from orders_1
+where customerID in (select distinct customerID from orders_2);
+```
+Output
+```
++-----------------+
+| total_customers |
++-----------------+
+|              25 |
++-----------------+
++---------+---------+
+| quarter | q2      |
++---------+---------+
+| 1       | 24.0000 |
++---------+---------+
+```
+## 5. Kesimpulan
+
+Berdasarkan data yang telah kita peroleh melalui query SQL, Kita dapat menarik kesimpulan bahwa :
+
+1. Performance xyz.com menurun signifikan di quarter ke-2, terlihat dari nilai penjualan dan revenue yang drop hingga 20% dan 24%,
+2. Perolehan customer baru juga tidak terlalu baik, dan sedikit menurun dibandingkan quarter sebelumnya.
+3. Ketertarikan customer baru untuk berbelanja di xyz.com masih kurang, hanya sekitar 56% saja yang sudah bertransaksi. Disarankan tim Produk untuk perlu mempelajari behaviour customer dan melakukan product improvement, sehingga conversion rate (register to transaction) dapat meningkat.
+4. Produk kategori S18 dan S24 berkontribusi sekitar 50% dari total order dan 60% dari total penjualan, sehingga xyz.com sebaiknya fokus untuk pengembangan category S18 dan S24.
+5. Retention rate customer xyz.com juga sangat rendah yaitu hanya 24%, artinya banyak customer yang sudah bertransaksi di quarter-1 tidak kembali melakukan order di quarter ke-2 (no repeat order).
+6. xyz.com mengalami pertumbuhan negatif di quarter ke-2 dan perlu melakukan banyak improvement baik itu di sisi produk dan bisnis marketing, jika ingin mencapai target dan positif growth di quarter ke-3. Rendahnya retention rate dan conversion rate bisa menjadi diagnosa awal bahwa customer tidak tertarik/kurang puas/kecewa berbelanja di xyz.com.

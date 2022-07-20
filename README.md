@@ -14,6 +14,10 @@ Using Public Dataset in BigQuery anda Google Data Studio for visualization
 ## 5_COVID-19 Dashboard in Indonesia
 Using dataset sources from Kaggle and Google Data Studio for data visualization
 
+## 6_Project Data Analysis for B2B Retail: Customer Analytics Report
+This project is one of the project-based modules that I have completed at DQLab Academy. The background given is that there are B2B startup companies that will review the company's performance during the last quarter. Participants were asked to provide a review of the current sales growth.
+Analysis on this project using **SQL**.
+
 
 
 

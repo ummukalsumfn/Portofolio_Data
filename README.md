@@ -1,4 +1,4 @@
-# Summary
+# Summary :open_file_folder:
 ## 1_Case Study NYC AirBnB
 Using Python + Google Colab (data cleaning and analysis) and Google Data Studio for data visualization
 

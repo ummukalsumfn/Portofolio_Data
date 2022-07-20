@@ -1,4 +1,4 @@
-# Covid19 Open Data 
+# Covid19 Open Data 📈
 
 ## Dataset
 Public Dataset in BigQuery :
@@ -11,7 +11,7 @@ Public Dataset in BigQuery :
 2. Top 5 Provinces with the highest number of cases
 3. Ratio of cases per population
 
-## SQL Query ⬇️
+## SQL Query 
 Get covid19 comulative confirmed and new confirmed cases per day per subregion
 
 ```sql

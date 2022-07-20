@@ -3,6 +3,13 @@
 - Data visualization test: Tes ini dimaksudkan untuk menguji kemampuan member dalam hal visualisasi data.
 - Basic Stats Method test: Tes ini dimaksudkan untuk menguji kemampuan member dalam melakukan modeling data menggunakan statistika dasar.
 
+## Intro 
+1. Data preparation test.
+- Importing data: Melakukan import data_retail.csv ke python environment.
+- Cleansing data: Melakukan pembersihan dan modifikasi data sehingga siap digunakan untuk analisis lebih lanjut.
+2. Data visualization test: Mendapatkan insight dari hasil visualisasi yang telah dibuat.
+3. Basic stats method test: Mendapatkan insight dari model dan evaluasi model yang sudah dibuat dan diuji.
+ 
 
 ## 1. Data Preparation
 DQLab sport center adalah toko yang menjual berbagai kebutuhan olahraga seperti Jaket, Baju, Tas, dan Sepatu. Toko ini mulai berjualan sejak tahun 2013, sehingga sudah memiliki pelanggan tetap sejak lama, dan tetap berusaha untuk mendapatkan pelanggan baru sampai saat ini.
@@ -24,11 +31,7 @@ Field yang ada pada data tersebut antara lain:
 7. Average_Transaction_Amount
 8. Count_Transaction
  
-Data preparation test.
-- Importing data: Melakukan import data_retail.csv ke python environment.
-- Cleansing data: Melakukan pembersihan dan modifikasi data sehingga siap digunakan untuk analisis lebih lanjut.
-Data visualization test: Mendapatkan insight dari hasil visualisasi yang telah dibuat.
-Basic stats method test: Mendapatkan insight dari model dan evaluasi model yang sudah dibuat dan diuji.
+
 
 
 

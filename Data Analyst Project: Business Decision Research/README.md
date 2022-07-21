@@ -31,7 +31,15 @@ Field yang ada pada data tersebut antara lain:
 7. Average_Transaction_Amount
 8. Count_Transaction
  
+**1.1 Data Cleansing**
 
+Mengubah tipe data untuk kolom First_Transaction dan Last_Transaction dari int ke datetime
 
+**1.2 Churn Customers**
 
+Untuk menentukan churn customers sesuai definisi yang telah diberikan
+- transaksi paling terakhir kapan dilakukan
+- klasifikasikanlah mana customer yang berstatus churn dan mana yang tidak
+  
+**1.3 Menghapus Kolom**
 

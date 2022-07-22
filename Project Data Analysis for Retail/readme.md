@@ -1,4 +1,4 @@
-# Project Data Analysis for Retail: Sales Performance Report
+# Project Data Analysis for Retail: Sales Performance Report | On Progress
 Melakukan analisis terhadap performance dari DQLab Store dengan menggunakan MySQL
 
 ## 1. Intro

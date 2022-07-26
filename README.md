@@ -18,6 +18,8 @@ Using dataset sources from Kaggle and Google Data Studio for data visualization
 This project is one of the project-based modules that I have completed at DQLab Academy. The background given is that there are B2B startup companies that will review the company's performance during the last quarter. Participants were asked to provide a review of the current sales growth.
 Analysis on this project using **SQL**.
 
+## 7_Case Study San Fransisco Bikeshare
+Using Public Dataset in BigQuery and Google Data Studio for visualization
 
 
 

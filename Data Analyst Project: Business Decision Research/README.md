@@ -43,3 +43,27 @@ Untuk menentukan churn customers sesuai definisi yang telah diberikan
   
 **1.3 Menghapus Kolom**
 
+Kolom-kolom yang tidak diperlukan akan di hapus yakni no dan Row_Num
+
+## 2. Data Visualization
+
+**2.1 Customer acquisition by year**
+
+![image](https://user-images.githubusercontent.com/108319934/185622425-f685f496-a2ed-4b15-8ba3-3847a07c0439.png)
+
+**2.2 Transaction by year**
+
+Visualisasi trend jumlah transaksi per tahunnya menggunakan bar chart
+
+![image](https://user-images.githubusercontent.com/108319934/185622565-7d136c31-016c-4d85-ac2b-c236ef0b676a.png)
+
+**2.3 Average transaction amount by year**
+
+Dengan menggunakan seaborn pointplot, visualisasi tren dari tahun ke tahun rata-rata jumlah transaksi untuk tiap-tiap produknya.
+
+![image](https://user-images.githubusercontent.com/108319934/185622689-6d0a3d99-d729-44f5-b78d-7ec0ee59cf95.png)
+
+
+
+
+

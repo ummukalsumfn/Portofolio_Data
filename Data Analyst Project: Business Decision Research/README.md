@@ -63,7 +63,31 @@ Dengan menggunakan seaborn pointplot, visualisasi tren dari tahun ke tahun rata-
 
 ![image](https://user-images.githubusercontent.com/108319934/185622689-6d0a3d99-d729-44f5-b78d-7ec0ee59cf95.png)
 
+**2.4 Proporsi churned customer untuk setiap produk**
 
+Dari sisi churned customer, khususnya untuk melihat seberapa besar proporsi churned customer untuk tiap-tiap produk dapat diketahui insight-nya melalui pie chart.
+
+![image](https://user-images.githubusercontent.com/108319934/187060051-467f5a08-1582-45a3-a2e9-463eb46357ef.png)
+
+**2.5 Distribusi kategorisasi count transaction**
+
+Selanjutnya akan melakukan visualisasi dari distribusi kategorisasi count transaction. Kategorisasi ini dilakukan dengan mengelompokkan jumlah transaksi seperti yang diperlihatkan oleh tabel berikut:
+
+![image](https://user-images.githubusercontent.com/108319934/187060074-db7b57fc-ca54-43a5-b36f-3ba74f90fa74.png)
+
+Setelah menambahkan kolom baru untuk kategori ini dengan nama Count_Transaction_Group, kemudian divisualisasikan dengan bar chart.
+
+![image](https://user-images.githubusercontent.com/108319934/187060084-3af1020f-d501-436b-b982-a5b0881c01fb.png)
+
+**2.6 Distribusi kategorisasi average transaction amount**
+
+Selanjutnya, akan melakukan visualisasi dari distribusi kategorisasi average transaction amount. Kategorisasi ini dilakukan dengan mengelompokkan rata-rata besar transaksi seperti yang diperlihatkan oleh tabel berikut:
+
+![image](https://user-images.githubusercontent.com/108319934/187060140-761e33b1-6c0b-4ef5-8cf5-6a168d66468c.png)
+
+Setelah ditambahkan kolom baru untuk kategori ini dengan nama Average_Transaction_Amount_Group, kemudian divisualisasikan dengan bar chart.
+
+![image](https://user-images.githubusercontent.com/108319934/187060148-2b3ada19-ead1-4f30-96f3-cc893a731154.png)
 
 
 

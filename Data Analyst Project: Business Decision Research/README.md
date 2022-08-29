@@ -1,4 +1,7 @@
 #  Data Analyst Project: Business Decision Research
+
+Mentor : Wahyu Herlambang (Senior Data Analyst Traveloka)
+
 - Data preparation test: Tes ini dimaksudkan untuk menguji kemampuan member dalam melakukan ETL data.
 - Data visualization test: Tes ini dimaksudkan untuk menguji kemampuan member dalam hal visualisasi data.
 - Basic Stats Method test: Tes ini dimaksudkan untuk menguji kemampuan member dalam melakukan modeling data menggunakan statistika dasar.
@@ -98,5 +101,51 @@ Setelah ditambahkan kolom baru untuk kategori ini dengan nama Average_Transactio
 
 ![image](https://user-images.githubusercontent.com/108319934/187060148-2b3ada19-ead1-4f30-96f3-cc893a731154.png)
 
+**3.Modelling**
+
+**3.1 Feature Columns dan Target**
+
+Di bagian ini, selanjutnya akan menentukan feature columns dari dataset yang dimiliki, di sini dipilih kolom Average_Transaction_Amount, Count_Transaction, dan Year_Diff. Akan tetapi, kolom terakhir belum ada. Sehingga perlu dicreate dahulu kolom Year_Diff ini dan kemudian assign dataset dengan feature columns ini sebagai variabel independent X. Untuk target tentunya persoalan costumer dengan kondisi churn atau tidak, assign dataset untuk target ini ke dalam variabe dependent y.
+
+**3.2 Split X dan y ke dalam bagian training dan testing**
+
+Setelah variabel independent X dan variabel dependent y selesai dilakukan, maka pecahlah X dan y ke dalam bagian training dan testing. Bagian testing 25% dari jumlah entri data.
+
+**3.3 Train, predict dan evaluate**
+
+Langkah selanjutnya akan membuat model menggunakan Logistic Regression, inisialisasilah model, fit, dan kemudian evaluasi model dengan menggunakan confusion matrix.
+
+![image](https://user-images.githubusercontent.com/108319934/187141588-55155752-b533-4cc2-a632-15a9d93a32cf.png)
+
+
+**3.4 Visualisasi Confusion Matrix**
+
+Confusion matrix yang telah dihitung sebelumnya dapat divisualisasikan dengan menggunakan heatmap dari seaborn. Untuk itu tampilkanlah visualisasi dari confusion matrix ini.
+
+![image](https://user-images.githubusercontent.com/108319934/187141794-1cdd47d9-4471-4cb3-ac88-804d8956aa1f.png)
+
+**3.5  Accuracy, Precision, dan Recall**
+
+Kemudian, menghitung nilai accuracy, precission dan recall berdasarkan nilai target sesungguhnya dan nilai target hasil prediksi.
+
+![image](https://user-images.githubusercontent.com/108319934/187141947-1d8bf8d4-7ddb-44b4-b0df-a73437f40c7b.png)
+
+## Kesimpulan
+- Dapat menerapkan bahasa pemograman Python untuk menyelesaikan persoalan untuk analisis data
+
+- Dapat menerapkan SQL dan sistem database relational agar dapat digunakan dalam mengolah data pada perusahaan yang telah menerapkan IT
+
+- Dapat mengolah dataset skala kecil hingga besar
+
+- Dapat menerapkan exploratory data analysis (EDA) untuk persoalan bisnis
+
+- Dapat menghasilkan visualisasi data yang tepat sebagai representasi persoalan bisnis
+
+- Dapat membuat dan menghasilkan model prediktif hingga menguji tingkat akurasi untuk memilih model yang tepat
+
+- Dapat menerapkan teknik investigasi data-data yang memiliki anomali.
+
+
+ 
 
 

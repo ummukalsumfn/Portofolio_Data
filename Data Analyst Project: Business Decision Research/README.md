@@ -35,15 +35,24 @@ Field yang ada pada data tersebut antara lain:
 
 Mengubah tipe data untuk kolom First_Transaction dan Last_Transaction dari int ke datetime
 
+![image](https://user-images.githubusercontent.com/108319934/187139511-9df4ace0-0a38-400a-86bf-babecb27200e.png)
+
+
 **1.2 Churn Customers**
 
 Untuk menentukan churn customers sesuai definisi yang telah diberikan
 - transaksi paling terakhir kapan dilakukan
 - klasifikasikanlah mana customer yang berstatus churn dan mana yang tidak
+
+![image](https://user-images.githubusercontent.com/108319934/187139677-b503659d-24dd-4cda-b2bc-ef63e3e1f7a4.png)
+
   
 **1.3 Menghapus Kolom**
 
 Kolom-kolom yang tidak diperlukan akan di hapus yakni no dan Row_Num
+
+![image](https://user-images.githubusercontent.com/108319934/187139934-20980698-ddce-4217-b4c0-320cd221d578.png)
+
 
 ## 2. Data Visualization
 

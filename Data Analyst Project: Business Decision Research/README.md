@@ -146,6 +146,6 @@ Kemudian, menghitung nilai accuracy, precission dan recall berdasarkan nilai tar
 - Dapat menerapkan teknik investigasi data-data yang memiliki anomali.
 
 
- 
+## Python File
 
 

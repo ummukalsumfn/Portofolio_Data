@@ -21,7 +21,8 @@ Analysis on this project using **SQL**.
 ## 7_Case Study San Fransisco Bikeshare
 Using Public Dataset in BigQuery and Google Data Studio for visualization
 
-
+## 8_K-Means Clustering
+Defines and answer business problems with the dataset (Kaggle), explores data and visualizes insights with Python
 
 
 
